@@ -4,4 +4,8 @@ class MainTest extends AnyFunSuite {
   test("Main.addTwoNumbers") {
     assert(Main.addTwoNumbers(5, 1) == 6)
   }
+
+  test("Main.addTwoNumbersFailing") {
+    assert(Main.addTwoNumbers(5, 1) == 100)
+  }
 }
