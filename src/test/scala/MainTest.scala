@@ -20,8 +20,17 @@ class MainTest extends AnyFunSuite {
   test("Main.openFile") {
     val bufferedSource = Source.fromFile(TEXT_FILE_PATH)
     val textString = bufferedSource.getLines.mkString
+    println(textString)
     bufferedSource.close
     assert(textString.toLowerCase.filterNot(_ == ' ').toSet == ('a' to 'z').toSet)
+  }
+
+  test("Main.openFile2") {
+    val bufferedSource = Source.fromFile(TEXT_FILE_PATH)
+    val textString = bufferedSource.getLines.mkString
+    println(textString)
+    bufferedSource.close
+    assert(textString.toLowerCase.filterNot(_ == ' ').toSet == ('a' to 'x').toSet)
   }
 
 
